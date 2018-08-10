@@ -1,0 +1,164 @@
+
+body {
+    width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.heading {
+    font-family: Times;
+    font-size: 90px;
+    color: #9006f9;
+    position: absolute;
+    left: 135px;
+
+    
+}
+.center {
+    width: 800px;
+    height: 520px;
+    padding: 20px;
+    position: absolute;
+    background-color: #76e8c7;
+    left: 100px;
+    top: 130px;
+}
+.start {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 300px;
+    font-size: 30px;
+    top: 400px;
+    text-decoration: none;
+}
+.start:hover {
+    background-color: aqua
+}
+.startOver {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 300px;
+    font-size: 30px;
+    top: 400px;
+    text-decoration: none;
+}
+.startOver:hover{
+    background-color: rgb(247, 197, 137)
+}
+
+p{
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    left: 40px;
+    top: 100px;
+}
+
+#thirdPage {
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    left: 210px;
+    top: 100px;
+    text-align: center;
+}
+#fourthPage {
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    left: 90px;
+    top: 100px;
+    text-align: center;
+}
+.select1 { 
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    left: 150px;
+    font-size: 30px;
+    top: 250px;
+
+}
+.select2 { 
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    left: 150px;
+    font-size: 30px;
+    top: 310px;
+}
+.select3 { 
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    left: 150px;
+    font-size: 30px;
+    top: 370px;
+}
+#time{
+    font-family: courier;
+    font-size: 35px;
+    position: absolute;
+    left: 150px;
+    top: 20px;
+    color: #1b1e21;
+}
+#answer1 {
+    font-family: Helvetica;
+    font-size: 35px;
+    position: absolute;
+    left: 335px;
+    top: 150px;
+    color: #1b1e21;
+    text-align: center;
+}
+
+#answer2 {
+    font-family: Helvetica;
+    font-size: 25px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    color: #1b1e21;
+}
+#allDone {
+    font-family: Helvetica;
+
+    font-size: 30px;
+    position: absolute;
+    left: 335px;
+    top: 150px;
+    color: #1b1e21;
+}
+#correct {
+    font-family: Helvetica;
+    font-size: 20px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    color: #1b1e21;
+}
+
+#incorrect {
+    font-family: Helvetica;
+    font-size: 20px;
+    position: absolute;
+    left: 300px;
+    top: 250px;
+    color: #1b1e21;
+}
+#missed {
+    font-family: Helvetica;
+    font-size: 20px;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    color: #1b1e21;
+}
