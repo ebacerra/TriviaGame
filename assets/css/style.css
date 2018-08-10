@@ -12,16 +12,14 @@ body {
     font-size: 90px;
     color: #9006f9;
     position: absolute;
-    left: 135px;
-
-    
+    left: 135px; 
 }
 .center {
     width: 800px;
     height: 520px;
     padding: 20px;
     position: absolute;
-    background-color: #76e8c7;
+    background-color: #c3faba;
     left: 100px;
     top: 130px;
 }
