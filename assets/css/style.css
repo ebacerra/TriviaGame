@@ -9,19 +9,19 @@ body {
 
 .heading {
     font-family: Times;
-    font-size: 90px;
+    font-size: 65px;
     color: #9006f9;
     position: absolute;
-    left: 135px; 
+    left: 135px;
 }
 .center {
     width: 800px;
-    height: 520px;
-    padding: 20px;
+    height: 670px;
     position: absolute;
     background-color: #c3faba;
-    left: 100px;
-    top: 130px;
+    left: 125px;
+    top: 20px;
+    bottom: 20px;
 }
 .start {
     width: 200px;
@@ -48,64 +48,147 @@ body {
     background-color: rgb(247, 197, 137)
 }
 
-p{
+p {
     font-family: Georgia;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     position: absolute;
-    left: 40px;
-    top: 100px;
+    left: 147px;
+    top: 145px;
 }
 
-#thirdPage {
+#quest2 {
     font-family: Georgia;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     position: absolute;
-    left: 210px;
-    top: 100px;
+    left: 278px;
+    top: 247px;
     text-align: center;
 }
-#fourthPage {
+#quest3 {
     font-family: Georgia;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     position: absolute;
-    left: 90px;
-    top: 100px;
+    left: 174px;
+    top: 355px;
     text-align: center;
+}
+#quest4 {
+    font-family: Georgia;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 97px;
+    top: 458px;
 }
 .select1 { 
-    width: 500px;
-    height: 50px;
+    width: 78px;
+    height: 31px;
     position: absolute;
-    left: 150px;
-    font-size: 30px;
-    top: 250px;
+    left: 183px;
+    font-size: 15px;
+    top: 195px;
 
 }
 .select2 { 
-    width: 500px;
-    height: 50px;
+    width: 113px;
+    height: 31px;
     position: absolute;
-    left: 150px;
-    font-size: 30px;
-    top: 310px;
+    left: 314px;
+    font-size: 15px;
+    top: 195px;
 }
 .select3 { 
-    width: 500px;
-    height: 50px;
+    width: 128px;
+    height: 31px;
     position: absolute;
-    left: 150px;
-    font-size: 30px;
-    top: 370px;
+    left: 477px;
+    font-size: 15px;
+    top: 195px;
+}
+.select4 { 
+    width: 139px;
+    height: 31px;
+    position: absolute;
+    left: 147px;
+    font-size: 15px;
+    top: 300px;
+
+}
+.select5 { 
+    width: 113px;
+    height: 31px;
+    position: absolute;
+    left: 346px;
+    font-size: 15px;
+    top: 300px;
+}
+.select6 { 
+    width: 141px;
+    height: 31px;
+    position: absolute;
+    left: 522px;
+    font-size: 15px;
+    top: 300px;
+}
+.select7 { 
+    width: 113px;
+    height: 31px;
+    position: absolute;
+    left: 163px;
+    font-size: 15px;
+    top: 407px;
+
+}
+.select8 { 
+    width: 139px;
+    height: 31px;
+    position: absolute;
+    left: 328px;
+    font-size: 15px;
+    top: 407px;
+}
+.select9 { 
+    width: 141px;
+    height: 31px;
+    position: absolute;
+    left: 522px;
+    font-size: 15px;
+    top: 407px;
+}
+.select10 { 
+    width: 113px;
+    height: 31px;
+    position: absolute;
+    left: 146px;
+    font-size: 15px;
+    top: 551px;
+
+}
+.select11 { 
+    width: 165px;
+    height: 31px;
+    position: absolute;
+    left: 321px;
+    font-size: 15px;
+    top: 551px;
+}
+.select12 { 
+    width: 141px;
+    height: 31px;
+    position: absolute;
+    left: 544px;
+    font-size: 15px;
+    top: 551px;
 }
 #time{
-    font-family: courier;
-    font-size: 35px;
+    font-family: time;
+    font-size: 30px;
     position: absolute;
-    left: 150px;
-    top: 20px;
+    left: 214px;
+    top: 82px;
     color: #1b1e21;
 }
 #answer1 {
@@ -159,4 +242,61 @@ p{
     left: 300px;
     top: 300px;
     color: #1b1e21;
+}
+#toggle1 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 90px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+#toggle2 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 90px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+
+#toggle3 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 90px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+#toggle4 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 90px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+img{
+    position: absolute;
+    left: 10px;
 }
