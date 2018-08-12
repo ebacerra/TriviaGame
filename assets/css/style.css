@@ -183,7 +183,7 @@ p {
     font-size: 15px;
     top: 551px;
 }
-#time{
+h3{
     font-family: time;
     font-size: 30px;
     position: absolute;
@@ -191,6 +191,15 @@ p {
     top: 82px;
     color: #1b1e21;
 }
+h4{
+    font-family: time;
+    font-size: 30px;
+    position: absolute;
+    left: 450px;
+    top: 87px;
+    color: #1b1e21;
+}
+
 #answer1 {
     font-family: Helvetica;
     font-size: 35px;
@@ -210,19 +219,18 @@ p {
     color: #1b1e21;
 }
 #allDone {
-    font-family: Helvetica;
-
-    font-size: 30px;
+    font-family: times;
+    font-size: 40px;
     position: absolute;
-    left: 335px;
-    top: 150px;
-    color: #1b1e21;
+    left: 221px;
+    top: 71px;
+    color: #f13a8c;
 }
 #correct {
     font-family: Helvetica;
     font-size: 20px;
     position: absolute;
-    left: 300px;
+    left: 276px;
     top: 200px;
     color: #1b1e21;
 }
@@ -231,7 +239,7 @@ p {
     font-family: Helvetica;
     font-size: 20px;
     position: absolute;
-    left: 300px;
+    left: 276px;
     top: 250px;
     color: #1b1e21;
 }
@@ -239,16 +247,25 @@ p {
     font-family: Helvetica;
     font-size: 20px;
     position: absolute;
-    left: 300px;
+    left: 276px;
     top: 300px;
     color: #1b1e21;
 }
+#total{
+    font-family: Helvetica;
+    font-size: 30px;
+    position: absolute;
+    left: 276px;
+    top: 370px;
+    color: #1b1e21;
+}
+
 #toggle1 {
     width: 800px;
     height: 670px;
     position: absolute;
     background-color: #c3faba;
-    top: 90px;
+    top: 88px;
     bottom: 20px;
     text-align: center;
     font-family: times;
@@ -261,7 +278,7 @@ p {
     height: 670px;
     position: absolute;
     background-color: #c3faba;
-    top: 90px;
+    top: 88px;
     bottom: 20px;
     text-align: center;
     font-family: times;
@@ -275,7 +292,7 @@ p {
     height: 670px;
     position: absolute;
     background-color: #c3faba;
-    top: 90px;
+    top: 88px;
     bottom: 20px;
     text-align: center;
     font-family: times;
@@ -288,7 +305,59 @@ p {
     height: 670px;
     position: absolute;
     background-color: #c3faba;
-    top: 90px;
+    top: 88px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+#toggle5 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 88px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+#toggle6 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 88px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+#toggle7 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 88px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none; 
+}
+#toggle8 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 88px;
     bottom: 20px;
     text-align: center;
     font-family: times;
@@ -300,3 +369,30 @@ img{
     position: absolute;
     left: 10px;
 }
+.Score {
+    width: 165px;
+    height: 55px;
+    position: absolute;
+    left: 46px;
+    font-size: 25px;
+    font-weight: bold;
+    top: 604px;
+    text-decoration: none;
+    font-family: times;
+}
+}
+.Score:hover{
+    background-color: rgb(247, 197, 137)
+}
+#toggle9 {
+    width: 800px;
+    height: 670px;
+    position: absolute;
+    background-color: #c3faba;
+    top: 88px;
+    bottom: 20px;
+    text-align: center;
+    font-family: times;
+    font-size: 30px;
+    font-weight: bold;
+    display: none;
