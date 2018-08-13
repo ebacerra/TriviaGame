@@ -10,80 +10,88 @@ $(document).ready(function () {
 
     // ---- timer ---- 
     window.onload = function () {
-        $(".timer").on("click", timer)
+        $(".start").on("click", stopwatch)
+
+        var timer = 30;
+        var min = 0;
+        var stopwatch = setInterval(function () {
+            var minutes = Math.floor((timer % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timer % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            $("#timerDisplay").text(timer + "  seconds");
+            timer--;
+            // If the count down is over, write some text 
+            if (timer < 1) {
+                clearInterval(stopwatch);
+                $("#timerDisplay").text("Your time is up!");
+                setTimeout(function () {
+                    location.reload();
+
+                    $("#toggle9").hide();
+                }, 7000);
+            }
+            console.log(timer);
+        }, 1000);
+
+
     };
 
-    var myVar = setInterval(timer, 1000);
 
-    function timer() {
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        $("#timerDisplay").html(s);
-    }
-
-
-    // var sec = 30;
-    // var timer = setInterval(function () {
-    //     $("timerDisplay").html('00:' + sec);
-    //     sec--;
-    //     if (sec < 0) {
-    //         clearInterval(timer);
-    //     }
-
-    // }, 1000);
-
-
-
-    // function timer() {
-    //     var s = 30;
-    //     s = checkTime(s);
-    //     $("#timerDisplay").html(s);
-    //     var t = setTimeout(function () {
-    //         timer()
-    //     }, 1000);
-    // }
-
-    // function checktime(i) {
-    //     if (1 < 10) {
-    //         i = "0" + i;
-    //     }
-    //     console.log(i);
-    // };
-
-
-    var correctAns = 0;
-    var incorrectAns = 0;
-    var missed = 0;
-    var total = 0;
 
     $("#correct").html(correctAns);
     $("#incorrect").html(incorrectAns);
     $("#missed").html(missed);
     $("#total").html(total);
+    var correctAns = 0;
+    var incorrectAns = 0;
+    var missed = 0;
+    var total = 0;
+
+    //****** for some reason my counter is not incrementing by 1 and it's adding it on my correct slot****
+
+
 
     // --------- 1st set of buttons
     $(".select1").click(function () {
+
         $("#toggle1").show(".select1");
 
-        // set timeout for the viewing  
+        // set timeout for the buttons hide/show
+
         setTimeout(function () {
+
             if ($(".select2").val() === $("#toggle2").val()) {
-                $("#toggle1").hide();
                 correctAns++;
                 total++;
+                $("#toggle1").hide();
+
             }
             else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
+                incorrectAns++;
                 $("#toggle1").hide();
-                ++incorrectAns;
+                //****** for some reason my counter is not incrementing by 1 and it's adding it on my correct slot****
 
             }
 
-        }, 2000);
+
+        }, 3000);
+
+        //**** I'm trying to gray out the buttons after it has clicked once to prevent on being clicked again but it wasn't doing anything. 
+
+        // var fooButton = hypeDocument.$(".select1");
+        // $(".select1").style.opacity = 1;
+        // $(".select1").style.pointerEvents = "auto"; ***************************
+        // I've also tried this: $(".select1").attr('onclick', this.style.opacity = "0.6", false); but nothing. ***************************
+        // $('.select1]').one('submit', function () {
+        //     $(this).attr('disabled', 'disabled');
 
         $("#correct").html("Correct Answers:  " + correctAns);
         $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
         $("#missed").html("Missed:  " + missed);
         $("#total").html("Total:  " + total);
         console.log(incorrectAns);
+
 
     });
 
@@ -99,16 +107,19 @@ $(document).ready(function () {
         setTimeout(function () {
 
             if ($(".select2").val() === $("#toggle2").val()) {
-                $("#toggle1").hide();
                 correctAns++;
                 total++
-            }
-            else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
                 $("#toggle1").hide();
-                incorrectAns++;
             }
 
-        }, 2000);
+
+            else if ($(".select1").val() || $(".select3").val() !== $("#toggle1").val()) {
+                true;
+                incorrectAns++;
+                $("#toggle1").hide();
+            }
+
+        }, 3000);
 
 
     });
@@ -125,18 +136,19 @@ $(document).ready(function () {
         setTimeout(function () {
 
             if ($(".select2").val() === $("#toggle2").val()) {
-                $("#toggle2").hide();
                 correctAns++;
                 total++;
+                $("#toggle2").hide();
             }
             else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
-                $("#toggle2").hide();
                 incorrectAns++;
+                $("#toggle2").hide();
+
 
 
             }
 
-        }, 2000);
+        }, 3000);
 
     });
     // --------- 2nd set of buttons
@@ -151,16 +163,17 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select4").val() === $("#toggle3").val()) {
-                $("#toggle3").hide();
                 correctAns++;
                 total++;
+                $("#toggle3").hide();
             }
             else if ($(".select5").val() || $(".select6").val() === $("#toggle4").val()) {
-                $("#toggle3").hide();
                 incorrectAns++;
+                $("#toggle3").hide();
+
             }
 
-        }, 2000);
+        }, 3000);
 
     });
     $(".select5").click(function () {
@@ -174,18 +187,19 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select4").val() === $("#toggle3").val()) {
-                $("#toggle4").hide();
                 correctAns++;
                 total++;
+                $("#toggle4").hide();
             }
             else if ($(".select5").val() || $(".select6").val() === $("#toggle3").val()) {
-                $("#toggle4").hide();
                 incorrectAns++;
+                $("#toggle4").hide();
+
 
 
             }
 
-        }, 2000);
+        }, 3000);
 
     });
 
@@ -201,18 +215,17 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select4").val() === $("#toggle3").val()) {
-                $("#toggle4").hide();
                 correctAns++;
                 total++;
+                $("#toggle4").hide();
             }
             else if ($(".select5").val() || $(".select6").val() === $("#toggle3").val()) {
-                $("#toggle4").hide();
                 incorrectAns++;
                 missed++;
-
+                $("#toggle4").hide();
             }
 
-        }, 2000);
+        }, 3000);
 
     });
     // 3rd sets show/hide ---
@@ -227,16 +240,16 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select7").val() === $("#toggle6").val()) {
-                $("#toggle5").hide();
                 correctAns++;
                 total++;
+                $("#toggle5").hide();
             }
             else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
-                $("#toggle5").hide();
                 incorrectAns++;
+                $("#toggle5").hide();
             }
 
-        }, 2000);
+        }, 3000);
     });
 
     $(".select8").click(function () {
@@ -255,11 +268,11 @@ $(document).ready(function () {
                 total++;
             }
             else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
-                $("#toggle5").hide();
                 incorrectAns++;
+                $("#toggle5").hide();
             }
 
-        }, 2000);
+        }, 3000);
     });
 
 
@@ -274,16 +287,17 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select7").val() === $("#toggle6").val()) {
-                $("#toggle6").hide();
                 correctAns++;
                 total++;
+                $("#toggle6").hide();
             }
             else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
-                $("#toggle6").hide();
                 incorrectAns++;
+                $("#toggle6").hide();
+
             }
 
-        }, 2000);
+        }, 3000);
     });
     // ------- 4th sets show/hide ---
     $(".select10").click(function () {
@@ -297,16 +311,17 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select10").val() === $("#toggle8").val()) {
-                $("#toggle8").hide();
                 correctAns++;
                 total++;
+                $("#toggle8").hide();
             }
             else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
-                $("#toggle8").hide();
                 incorrectAns++;
+                $("#toggle8").hide();
+
             }
 
-        }, 2000);
+        }, 3000);
 
 
     });
@@ -321,16 +336,17 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select10").val() === $("#toggle8").val()) {
-                $("#toggle7").hide();
                 correctAns++;
                 total++;
+                $("#toggle7").hide();
             }
             else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
-                $("#toggle8").hide();
                 incorrectAns++;
+                $("#toggle8").hide();
+
             }
 
-        }, 2000);
+        }, 3000);
 
 
     });
@@ -345,19 +361,28 @@ $(document).ready(function () {
 
         setTimeout(function () {
             if ($(".select10").val() === $("#toggle8").val()) {
-                $("#toggle7").hide();
                 correctAns++;
                 total++;
+                $("#toggle7").hide();
             }
             else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
-                $("#toggle8").hide();
                 incorrectAns++;
+                $("#toggle8").hide();
             }
 
-        }, 2000);
+        }, 3000);
 
     });
 
+    // if (($(".seledt1", ".select2", ".select3", ".select4", ".select5", ".select6", ".select7", ".select8", ".select9", ".select10", ".select11", ".select12").val() === ""))
+
+
+    // trying to add any of the missed counter by selecting all buttons and passing on to the If/else statement
+    if ($(".seledt1", ".select2", ".select3", ".select4", ".select5", ".select6", ".select7", ".select8", ".select9", ".select10", ".select11", ".select12").val() === "") {
+        missed++;
+    } else {
+
+    }
 
     // score
 
@@ -368,10 +393,13 @@ $(document).ready(function () {
             $("#toggle9").hide();
 
 
-        }, 2000);
+        }, 3000);
+
+
+
 
     });
-
+    // 
 
 
 });

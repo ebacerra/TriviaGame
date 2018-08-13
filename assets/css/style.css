@@ -10,9 +10,17 @@ body {
 .heading {
     font-family: Times;
     font-size: 65px;
-    color: #9006f9;
+    color: #0658f9;
     position: absolute;
     left: 135px;
+}
+#Countdown {
+    font-family: Times;
+    font-size: 65px;
+    color: #9006f9;
+    position: absolute;
+    left: 50px;
+    top: 120px;
 }
 .center {
     width: 800px;
@@ -29,8 +37,9 @@ body {
     position: absolute;
     left: 300px;
     font-size: 30px;
-    top: 400px;
+    top: 460px;
     text-decoration: none;
+    background-color: #0280d4
 }
 .start:hover {
     background-color: aqua
@@ -90,7 +99,12 @@ p {
     left: 183px;
     font-size: 15px;
     top: 195px;
-
+}
+.visible {
+        visibility: visible;
+}
+.invisible {
+    visibility: hidden;
 }
 .select2 { 
     width: 113px;
