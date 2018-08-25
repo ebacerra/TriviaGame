@@ -48,12 +48,10 @@ $(document).ready(function () {
     var missed = 0;
     var total = 0;
 
-    //****** for some reason my counter is not incrementing by 1 and it's adding it on my correct slot****
-
-
 
     // --------- 1st set of buttons
     $(".select1").click(function () {
+        console.log($(this).val() + "value");
 
         $("#toggle1").show(".select1");
 
@@ -61,36 +59,34 @@ $(document).ready(function () {
 
         setTimeout(function () {
 
-            if ($(".select2").val() === $("#toggle2").val()) {
-                correctAns++;
-                total++;
-                $("#toggle1").hide();
+            incorrectAns++;
+            $("#toggle1").hide();
 
-            }
-            else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
-                incorrectAns++;
-                $("#toggle1").hide();
-                //****** for some reason my counter is not incrementing by 1 and it's adding it on my correct slot****
 
-            }
-
+            // if ($(".select2").val() === $("#toggle2").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle1").hide();
+            //     console.log(correctAns + "yes");
+            // }
+            // else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
+            //     incorrectAns++;
+            //     $("#toggle1").hide();
+            //     //****** for some reason my counter is not incrementing by 1 and it's adding it on my correct slot****
+            //     console.log(incorrectAns + "no");
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
+            console.log(incorrectAns + "Incorrect Answer");
+            console.log(correctAns + "Correct Answer");
 
         }, 3000);
 
-        //**** I'm trying to gray out the buttons after it has clicked once to prevent on being clicked again but it wasn't doing anything. 
 
-        // var fooButton = hypeDocument.$(".select1");
-        // $(".select1").style.opacity = 1;
-        // $(".select1").style.pointerEvents = "auto"; ***************************
-        // I've also tried this: $(".select1").attr('onclick', this.style.opacity = "0.6", false); but nothing. ***************************
-        // $('.select1]').one('submit', function () {
-        //     $(this).attr('disabled', 'disabled');
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-        console.log(incorrectAns);
+
 
 
     });
@@ -98,26 +94,29 @@ $(document).ready(function () {
     $(".select3").click(function () {
         $("#toggle1").show(".select3");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
 
-            if ($(".select2").val() === $("#toggle2").val()) {
-                correctAns++;
-                total++
-                $("#toggle1").hide();
-            }
+            incorrectAns++;
+            $("#toggle1").hide();
+
+            // if ($(".select2").val() === $("#toggle2").val()) {
+            //     correctAns++;
+            //     total++
+            //     $("#toggle1").hide();
+            // }
 
 
-            else if ($(".select1").val() || $(".select3").val() !== $("#toggle1").val()) {
-                true;
-                incorrectAns++;
-                $("#toggle1").hide();
-            }
+            // else if ($(".select1").val() || $(".select3").val() !== $("#toggle1").val()) {
+            //     true;
+            //     incorrectAns++;
+            //     $("#toggle1").hide();
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
+            console.log(incorrectAns + "Incorrect Answer");
+            console.log(correctAns + "Correct Answer");
 
         }, 3000);
 
@@ -126,78 +125,91 @@ $(document).ready(function () {
     $(".select2").click(function () {
         $("#toggle2").show(".select2");
 
-
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
 
-            if ($(".select2").val() === $("#toggle2").val()) {
-                correctAns++;
-                total++;
-                $("#toggle2").hide();
-            }
-            else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
-                incorrectAns++;
-                $("#toggle2").hide();
+            correctAns++;
+            total++;
+            $("#toggle2").hide();
+
+            // if ($(".select2").val() === $("#toggle2").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle2").hide();
+            // }
+            // else if ($(".select1").val() || $(".select3").val() === $("#toggle1").val()) {
+            //     incorrectAns++;
+            //     $("#toggle2").hide();
 
 
 
-            }
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
+            console.log(incorrectAns + "Incorrect Answer");
+            console.log(correctAns + "Correct Answer");
 
         }, 3000);
 
     });
+
     // --------- 2nd set of buttons
     $(".select4").click(function () {
         $("#toggle3").show(".select4");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + correctAns);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select4").val() === $("#toggle3").val()) {
-                correctAns++;
-                total++;
-                $("#toggle3").hide();
-            }
-            else if ($(".select5").val() || $(".select6").val() === $("#toggle4").val()) {
-                incorrectAns++;
-                $("#toggle3").hide();
 
-            }
+            correctAns++;
+            total++;
+            $("#toggle3").hide();
+
+            // if ($(".select4").val() === $("#toggle3").val()) {
+            // }
+            // else if ($(".select5").val() || $(".select6").val() === $("#toggle4").val()) {
+            //     incorrectAns++;
+            //     $("#toggle3").hide();
+
+            // }
+            // else {
+            //     console.log("neither correct or incorrect");
+            // }
+
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns + "Incorrect Answer");
+            $("#missed").html("Missed:  " + correctAns);
+            console.log(correctAns + "Correct Answer");
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
     });
+
     $(".select5").click(function () {
         $("#toggle4").show(".select5");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select4").val() === $("#toggle3").val()) {
-                correctAns++;
-                total++;
-                $("#toggle4").hide();
-            }
-            else if ($(".select5").val() || $(".select6").val() === $("#toggle3").val()) {
-                incorrectAns++;
-                $("#toggle4").hide();
+
+            incorrectAns++;
+            $("#toggle4").hide();
+
+            // if ($(".select4").val() === $("#toggle3").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle4").hide();
+            // }
+            // else if ($(".select5").val() || $(".select6").val() === $("#toggle3").val()) {
 
 
 
-            }
+
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
@@ -207,47 +219,52 @@ $(document).ready(function () {
     $(".select6").click(function () {
         $("#toggle4").show(".select6");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select4").val() === $("#toggle3").val()) {
-                correctAns++;
-                total++;
-                $("#toggle4").hide();
-            }
-            else if ($(".select5").val() || $(".select6").val() === $("#toggle3").val()) {
-                incorrectAns++;
-                missed++;
-                $("#toggle4").hide();
-            }
+            incorrectAns++;
+            missed++;
+            $("#toggle4").hide();
+
+            // if ($(".select4").val() === $("#toggle3").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle4").hide();
+            // }
+            // else if ($(".select5").val() || $(".select6").val() === $("#toggle3").val()) {
+
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
     });
+
     // 3rd sets show/hide ---
     $(".select7").click(function () {
         $("#toggle5").show(".select7");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select7").val() === $("#toggle6").val()) {
-                correctAns++;
-                total++;
-                $("#toggle5").hide();
-            }
-            else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
-                incorrectAns++;
-                $("#toggle5").hide();
-            }
+
+            incorrectAns++;
+            $("#toggle5").hide();
+
+            // if ($(".select7").val() === $("#toggle6").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle5").hide();
+            // }
+            // else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
+
+            // }
+
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
     });
@@ -255,22 +272,28 @@ $(document).ready(function () {
     $(".select8").click(function () {
         $("#toggle5").show(".select8");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
 
         setTimeout(function () {
-            if ($(".select7").val() === $("#toggle6").val()) {
-                $("#toggle5").hide();
-                correctAns++;
-                total++;
-            }
-            else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
-                incorrectAns++;
-                $("#toggle5").hide();
-            }
+
+            incorrectAns++;
+            $("#toggle5").hide();
+
+
+            // if ($(".select7").val() === $("#toggle6").val()) {
+            //     $("#toggle5").hide();
+            //     correctAns++;
+            //     total++;
+            // }
+            // else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
+
+            // }
+
+
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
     });
@@ -279,96 +302,106 @@ $(document).ready(function () {
     $(".select9").click(function () {
         $("#toggle6").show(".select9");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select7").val() === $("#toggle6").val()) {
-                correctAns++;
-                total++;
-                $("#toggle6").hide();
-            }
-            else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
-                incorrectAns++;
-                $("#toggle6").hide();
 
-            }
+            correctAns++;
+            total++;
+            $("#toggle6").hide();
+
+            // if ($(".select7").val() === $("#toggle6").val()) {
+            // }
+            // else if ($(".select7").val() || $(".select8").val() === $("#toggle5").val()) {
+            //     incorrectAns++;
+            //     $("#toggle6").hide();
+
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
     });
+
     // ------- 4th sets show/hide ---
     $(".select10").click(function () {
         $("#toggle8").show(".select10");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select10").val() === $("#toggle8").val()) {
-                correctAns++;
-                total++;
-                $("#toggle8").hide();
-            }
-            else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
-                incorrectAns++;
-                $("#toggle8").hide();
 
-            }
+            correctAns++;
+            total++;
+            $("#toggle8").hide();
+
+            // if ($(".select10").val() === $("#toggle8").val()) {
+            // }
+            // else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
+            //     incorrectAns++;
+            //     $("#toggle8").hide();
+
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
 
     });
+
     $(".select11").click(function () {
         $("#toggle7").show(".select11");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select10").val() === $("#toggle8").val()) {
-                correctAns++;
-                total++;
-                $("#toggle7").hide();
-            }
-            else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
-                incorrectAns++;
-                $("#toggle8").hide();
 
-            }
+            incorrectAns++;
+            $("#toggle8").hide();
+
+            // if ($(".select10").val() === $("#toggle8").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle7").hide();
+            // }
+            // else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
+
+
+            // }
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
 
     });
+
     $(".select12").click(function () {
         $("#toggle7").show(".select12");
 
-        $("#correct").html("Correct Answers:  " + correctAns);
-        $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
-        console.log(incorrectAns);
-        $("#missed").html("Missed:  " + missed);
-        $("#total").html("Total:  " + total);
-
         setTimeout(function () {
-            if ($(".select10").val() === $("#toggle8").val()) {
-                correctAns++;
-                total++;
-                $("#toggle7").hide();
-            }
-            else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
-                incorrectAns++;
-                $("#toggle8").hide();
-            }
+
+            incorrectAns++;
+            $("#toggle8").hide();
+
+            // if ($(".select10").val() === $("#toggle8").val()) {
+            //     correctAns++;
+            //     total++;
+            //     $("#toggle7").hide();
+            // }
+            // else if ($(".select11").val() || $(".select12").val() === $("#toggle7").val()) {
+
+            // }
+
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            console.log(incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
@@ -392,6 +425,10 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#toggle9").hide();
 
+            $("#correct").html("Correct Answers:  " + correctAns);
+            $("#incorrect").html("Incorrect Answers:  " + incorrectAns);
+            $("#missed").html("Missed:  " + missed);
+            $("#total").html("Total:  " + total);
 
         }, 3000);
 
