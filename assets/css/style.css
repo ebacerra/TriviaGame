@@ -1,6 +1,11 @@
 
 body {
-    width: 900px;
+    width: 100%;
+    background-image: url(../images/take1_movie.jpg);
+    background-repeat: no-repeat;
+    align-content: center;
+    
+
 }
 
 * {
@@ -8,11 +13,11 @@ body {
   }
 
 .heading {
-    font-family: Times;
-    font-size: 65px;
+    font-family: 'Krona One', sans-serif;
+    font-size: 50px;
     color: #0658f9;
-    position: absolute;
-    left: 135px;
+    position: relative;
+    left: 110px;
 }
 #Countdown {
     font-family: Times;
@@ -25,21 +30,23 @@ body {
 .center {
     width: 800px;
     height: 670px;
-    position: absolute;
+    position: relative;
     background-color: #c3faba;
-    left: 125px;
-    top: 20px;
-    bottom: 20px;
+    left: -3px;
+    top: 109px;
+    border-radius: 40px;
 }
 .start {
     width: 200px;
     height: 50px;
-    position: absolute;
+    position: relative;
     left: 300px;
     font-size: 30px;
     top: 460px;
     text-decoration: none;
-    background-color: #0280d4
+    background-color: #0280d4;
+    border-radius: 30px;
+    color: #ffffff;
 }
 .start:hover {
     background-color: aqua
@@ -56,14 +63,22 @@ body {
 .startOver:hover{
     background-color: rgb(247, 197, 137)
 }
-
+#togBox{font-family: Georgia;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    left: -36px;
+    top: 42px;
+    text-align: center;
+}
 p {
     font-family: Georgia;
     font-size: 30px;
     font-weight: bold;
     position: absolute;
-    left: 147px;
+    left: 138px;
     top: 145px;
+    text-align: center;
 }
 
 #quest2 {
@@ -99,6 +114,10 @@ p {
     left: 183px;
     font-size: 15px;
     top: 195px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
+    
 }
 .visible {
         visibility: visible;
@@ -113,6 +132,9 @@ p {
     left: 314px;
     font-size: 15px;
     top: 195px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select3 { 
     width: 128px;
@@ -121,6 +143,9 @@ p {
     left: 477px;
     font-size: 15px;
     top: 195px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select4 { 
     width: 139px;
@@ -129,6 +154,10 @@ p {
     left: 147px;
     font-size: 15px;
     top: 300px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
+
 
 }
 .select5 { 
@@ -138,6 +167,9 @@ p {
     left: 346px;
     font-size: 15px;
     top: 300px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select6 { 
     width: 141px;
@@ -146,6 +178,10 @@ p {
     left: 522px;
     font-size: 15px;
     top: 300px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
+
 }
 .select7 { 
     width: 113px;
@@ -154,7 +190,9 @@ p {
     left: 163px;
     font-size: 15px;
     top: 407px;
-
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select8 { 
     width: 139px;
@@ -163,6 +201,9 @@ p {
     left: 328px;
     font-size: 15px;
     top: 407px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select9 { 
     width: 141px;
@@ -171,6 +212,9 @@ p {
     left: 522px;
     font-size: 15px;
     top: 407px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select10 { 
     width: 113px;
@@ -179,6 +223,9 @@ p {
     left: 146px;
     font-size: 15px;
     top: 551px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 
 }
 .select11 { 
@@ -188,6 +235,9 @@ p {
     left: 321px;
     font-size: 15px;
     top: 551px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 .select12 { 
     width: 141px;
@@ -196,26 +246,31 @@ p {
     left: 544px;
     font-size: 15px;
     top: 551px;
+    border-radius: 15px;
+    outline: none;
+    text-align: center !important;
 }
 h3{
-    font-family: time;
+    font-family: 'Nunito', sans-serif !important;
     font-size: 30px;
     position: absolute;
     left: 214px;
     top: 82px;
-    color: #1b1e21;
+    color: rgb(231, 104, 20) !important;
+    font-weight: bolder;
 }
 h4{
-    font-family: time;
+    font-family: 'Nunito', sans-serif;
     font-size: 30px;
     position: absolute;
     left: 450px;
     top: 87px;
     color: #1b1e21;
+    font-weight: bolder;
 }
 
 #answer1 {
-    font-family: Helvetica;
+    font-family: 'Abril Fatface', cursive;
     font-size: 35px;
     position: absolute;
     left: 335px;
@@ -275,25 +330,27 @@ h4{
 }
 
 #toggle1 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
-    bottom: 20px;
+    top: 7px;
+    bottom: -147px;
+    left: 22px;
     text-align: center;
     font-family: times;
     font-size: 30px;
     font-weight: bold;
-    display: none; 
+    display: none;
+    align-content: center;
 }
 #toggle2 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 753px;
+    height: 579px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
-    bottom: 20px;
+    top: 11px;
+    left: 12px;
     text-align: center;
     font-family: times;
     font-size: 30px;
@@ -302,38 +359,42 @@ h4{
 }
 
 #toggle3 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
+    top: 7px;
+    left: 25px;
     bottom: 20px;
     text-align: center;
     font-family: times;
     font-size: 30px;
     font-weight: bold;
     display: none; 
+    border-radius: 20px;
 }
 #toggle4 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
+    top: 6px;
+    left: 25px;
     bottom: 20px;
     text-align: center;
     font-family: times;
     font-size: 30px;
     font-weight: bold;
     display: none; 
+    border-radius: 20px;
 }
 #toggle5 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
-    bottom: 20px;
+    top: 11px;
+    left: 20px;
     text-align: center;
     font-family: times;
     font-size: 30px;
@@ -341,12 +402,12 @@ h4{
     display: none; 
 }
 #toggle6 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
-    bottom: 20px;
+    top: 7px;
+    left: 22px;
     text-align: center;
     font-family: times;
     font-size: 30px;
@@ -354,12 +415,12 @@ h4{
     display: none; 
 }
 #toggle7 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
-    bottom: 20px;
+    top: 8px;
+    left: 41px;
     text-align: center;
     font-family: times;
     font-size: 30px;
@@ -367,21 +428,33 @@ h4{
     display: none; 
 }
 #toggle8 {
-    width: 800px;
-    height: 670px;
-    position: absolute;
+    width: 725px;
+    height: 580px;
+    position: relative;
     background-color: #c3faba;
-    top: 88px;
-    bottom: 20px;
+    top: 4px;
+    left: 44px;
     text-align: center;
     font-family: times;
     font-size: 30px;
     font-weight: bold;
     display: none; 
 }
+button {
+    /* display: inline-flex; */
+    background-color:#2908f99e;
+    color: #ffffff;
+    border-radius: 20px;
+    outline: none; 
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: bold;
+    text-align: center !important;
+}
 img{
-    position: absolute;
-    left: 10px;
+    position: relative;
+    left: 31px;
+    top: 55px;
+    border-radius: 10px;
 }
 .Score {
     width: 165px;
@@ -393,8 +466,10 @@ img{
     top: 604px;
     text-decoration: none;
     font-family: times;
+    border-radius: 50px;
+    outline: none
 }
-}
+
 .Score:hover{
     background-color: rgb(247, 197, 137)
 }
@@ -403,7 +478,7 @@ img{
     height: 670px;
     position: absolute;
     background-color: #c3faba;
-    top: 88px;
+    top: 73px;
     bottom: 20px;
     text-align: center;
     font-family: times;

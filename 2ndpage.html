@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Krona+One|Nunito|Righteous|Mukta" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -15,120 +16,121 @@
 <body background="../TriviaGame/assets/images/Background_Film.jpg">
 
 
-    <div class="center">
-        <div class="heading">
-            <strong>Movie Lines Trivia</strong>
-        </div>
-        <div class="timer">
-            <h3>Time Remaining:</h3>
-            <h4 id="timerDisplay"></h4>
-        </div>
-
-
-        <div>
-            <p>"They call it a Royale with cheese"</p>
-            <div id="quest2">"Why so serious?"</div>
-            <div id="quest3">"Say Hello to my little friend!"</div>
-            <div id="quest4">"They may take our lives, but they'll never take our freedom!"
+    <div class="center mx-auto">
+        <div class="">
+            <div class="heading mx-auto">
+                <strong>Movie Lines Trivia</strong>
+            </div>
+            <div class="timer mx-auto">
+                <h3><strong>Time Remaining:</strong></h3>
+                <h4 id="timerDisplay"></h4>
             </div>
 
-            <!-- buttons selections -->
-
-            <!-- buttons group 1 -->
-
-            <button class="select1" val=0>Kill Bill</button>
-
-            <button class="select2" val=2>Pulp Fiction</button>
-
-            <button class="select3" val=0>Death Wish</button>
-
-            <!-- buttons group 2 -->
-            <button class="select4" val=2>The Dark Knight</button>
-
-            <button class="select5" val=0>Iron Man</button>
-
-            <button class="select6" val=0>Kung Fu Panda</button>
-
-            <!-- buttons group 3 -->
-            <button class="select7" val=0>Carlitos Way</button>
-
-            <button class="select8" val=0>The Bronx Tale</button>
-
-            <button class="select9" val=2>Scarface</button>
-
-            <!-- buttons group 4 -->
-            <button class="select10" val=2>Braveheart</button>
-
-            <button class="select11" val=0>Lord Of The Rings</button>
-
-            <button class="select12" val=0>Gladiator</button>
-
-
-
-            <!-- Score Button -->
 
             <div>
-                <button class="Score">Final Score</button>
-            </div>
-            <div id="toggle9">
-                <div id="allDone">Here's how you did!</div>
+                <p>"They call it a Royale with cheese"</p>
+                <div id="quest2">"Why so serious?"</div>
+                <div id="quest3">"Say Hello to my little friend!"</div>
+                <div id="quest4">"They may take our lives, but they'll never take our freedom!"
+                </div>
 
-                <div id="correct"></div>
+                <!-- buttons selections -->
 
-                <div id="incorrect"></div>
+                <!-- buttons group 1 -->
 
-                <div id="missed"></div>
+                <button class="select1" val=0>Kill Bill</button>
 
-                <div id="total"></div>
-            </div>
+                <button class="select2" val=2>Pulp Fiction</button>
 
+                <button class="select3" val=0>Death Wish</button>
 
-            <!-- toggle between answer -->
-            <div id="toggle1" val=0>
+                <!-- buttons group 2 -->
+                <button class="select4" val=2>The Dark Knight</button>
 
-                <p>Nice try! The Answer is: Pulp Fiction
-                    <img src="../TriviaGame/assets/images/PulpFiction.gif" alt="">
-                </p>
-            </div>
-            <div id="toggle2" val=2>
-                <p>Winner Winner Chicken Dinner!
-                    <img src="../TriviaGame/assets/images/dance.giphy.gif" alt="">
-                </p>
-            </div>
-            <div id="toggle3" val=2>
-                <p>Awesome Sauce!
-                    <img src="../TriviaGame/assets/images/Clapping.gif" width="300" height="300" alt="">
-                </p>
-            </div>
-            <div id="toggle4" val=0>
-                <p>Wah Wah 😩 The Dark Knight!
-                    <img src="../TriviaGame/assets/images/TheDarkKnight.gif" width="345" height="230" alt="">
-                </p>
-            </div>
-            <div id="toggle5" val=0>
-                <p>Ay yay yay. The correct answer is: Scarface!
-                    <img src="../TriviaGame/assets/images/Relax_scarface.gif" width="420" height="420" alt="">
-                </p>
-            </div>
-            <div id="toggle6" val=2>
-                <p>Yes! You're doing really well!
-                    <img src="../TriviaGame/assets/images/Scarface.gif" alt="">
-                </p>
-            </div>
-            <div id="toggle7" val=0>
-                <p>Not! The correct answer is: Braveheart!
-                    <img src="../TriviaGame/assets/images/Cmon_Braveheart.gif" alt="">
-                </p>
-            </div>
-            <div id="toggle8" val=2>
-                <p>You're a true movie lover!!
-                    <img src="../TriviaGame/assets/images/WIn_Brave.gif" height="345" width="294" alt="">
-                </p>
-            </div>
-            <div id="scorepage">
-            </div>
+                <button class="select5" val=0>Iron Man</button>
+
+                <button class="select6" val=0>Kung Fu Panda</button>
+
+                <!-- buttons group 3 -->
+                <button class="select7" val=0>Carlitos Way</button>
+
+                <button class="select8" val=0>The Bronx Tale</button>
+
+                <button class="select9" val=2>Scarface</button>
+
+                <!-- buttons group 4 -->
+                <button class="select10" val=2>Braveheart</button>
+
+                <button class="select11" val=0>Lord Of The Rings</button>
+
+                <button class="select12" val=0>Gladiator</button>
 
 
+
+                <!-- Score Button -->
+
+                <div>
+                    <button class="Score">Final Score</button>
+                </div>
+                <div id="toggle9">
+                    <div id="allDone">Here's how you did!</div>
+
+                    <div id="correct"></div>
+
+                    <div id="incorrect"></div>
+
+                    <div id="missed"></div>
+
+                    <div id="total"></div>
+                </div>
+
+
+                <!-- toggle between answer -->
+                <div id="toggle1" val=0>
+
+                    <div id="togBox">Nice try! The Answer is: Pulp Fiction
+                        <img src="../TriviaGame/assets/images/PulpFiction.gif" alt="">
+                    </div>
+                </div>
+                <div id="toggle2" val=2>
+                    <div id="togBox">Winner Winner Chicken Dinner!
+                        <img src="../TriviaGame/assets/images/dance.giphy.gif" alt="">
+                    </div>
+                </div>
+                <div id="toggle3" val=2>
+                    <div id="togBox">Awesome Sauce!
+                        <img src="../TriviaGame/assets/images/Clapping.gif" width="300" height="300" alt="">
+                    </div>
+                </div>
+                <div id="toggle4" val=0>
+                    <div id="togBox">Wah Wah 😩 The Dark Knight!
+                        <img src="../TriviaGame/assets/images/TheDarkKnight.gif" width="345" height="230" alt="">
+                    </div>
+                </div>
+                <div id="toggle5" val=0>
+                    <div id="togBox">Ay yay yay. The correct answer is: Scarface!
+                        <img src="../TriviaGame/assets/images/Relax_scarface.gif" width="220" height="220" alt="">
+                    </div>
+                </div>
+                <div id="toggle6" val=2>
+                    <div id="togBox">Yes! You're doing really well!
+                        <img src="../TriviaGame/assets/images/Scarface.gif" alt="">
+                    </div>
+                </div>
+                <div id="toggle7" val=0>
+                    <div id="togBox">Not! The correct answer is: Braveheart!
+                        <img src="../TriviaGame/assets/images/Cmon_Braveheart.gif" alt="">
+                    </div>
+                </div>
+                <div id="toggle8" val=2>
+                    <div id="togBox">You're a true movie lover!!
+                        <img src="../TriviaGame/assets/images/WIn_Brave.gif" height="345" width="294" alt="">
+                    </div>
+                </div>
+
+                <div id="scorepage"></div>
+
+            </div>
         </div>
     </div>
 
