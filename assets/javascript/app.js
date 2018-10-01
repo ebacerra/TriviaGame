@@ -358,7 +358,7 @@ $(document).ready(function () {
         setTimeout(function () {
 
             incorrectAns++;
-            $("#toggle8").hide();
+            $("#toggle7").hide(); s
 
             // if ($(".select10").val() === $("#toggle8").val()) {
             //     correctAns++;
@@ -386,7 +386,7 @@ $(document).ready(function () {
         setTimeout(function () {
 
             incorrectAns++;
-            $("#toggle8").hide();
+            $("#toggle7").hide();
 
             // if ($(".select10").val() === $("#toggle8").val()) {
             //     correctAns++;
